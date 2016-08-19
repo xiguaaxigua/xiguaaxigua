@@ -4,7 +4,8 @@
   "description": "express demo",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "jade": "^1.11.0"
   },
   "devDependencies": {},
   "scripts": {
