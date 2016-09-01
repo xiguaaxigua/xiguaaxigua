@@ -1,3 +1,9 @@
 # ignore packages installed by npm
 */node_modules
 */*/node_modules
+
+# ignore WebStorm configuration files
+*/.idea
+*/.idea/*
+*/*/.idea
+*/*/.idea/*
