@@ -50,7 +50,7 @@ app.use(flash());
 // 日志中间件
 app.use(logger('dev'));
 
-// 解析JSON
+// 解析JSON 
 app.use(bodyParser.json());
 
 // 解析URLencoded
