@@ -1,0 +1,951 @@
+@charset 'utf-8';
+@import 'common/reset';
+@import 'common/_global';
+@import 'common/icon';
+@import 'common/form';
+@import 'common/module';
+@import 'common/layout';
+
+// layout.scss
+.l-content{
+    width: 1200px;
+    min-height: 400px;
+    margin: -25px auto 30px auto;
+
+    background-color: #fff;
+
+    @include box-sizing(border-box);
+    @include de-shadow();
+}
+
+// module.scss
+.m-breadcrumb{
+    font-size: 14px;
+    line-height: 2;
+
+    color: nth($font-color, 2);
+    a{
+        color: inherit;
+    }
+}
+
+.m-card{
+    position: relative;
+
+    width: 100%;
+    padding: 10px 20px;
+
+    @include box-sizing(border-box);
+    .m-card-pic{
+        display: block;
+
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    h3{
+        padding: 10px 0;
+
+        border-bottom: 1px dashed nth($font-color, 5);
+        a{
+            font-size: 14px;
+
+            display: inline-block;
+
+            min-height: 36px;
+
+            color: nth($font-color, 2);
+        }
+    }
+    .m-card-pr60{
+        padding-right: 60px;
+    }
+    .m-card-price{
+        position: relative;
+
+        @include box-sizing(border-box);
+        .icon{
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            right: 0;
+        }
+        p{
+            &:first-child{
+                font-size: 14px;
+
+                margin: 10px 0;
+
+                color: nth($font-color, 2);
+            }
+            &:nth-child(2){
+                font-size: 18px;
+                font-weight: bold;
+
+                color: nth($font-color, 5);
+            }
+        }
+    }
+    .m-card-label{
+        position: absolute;
+        top: 0;
+        right: 10px;
+        span{
+            font-size: 12px;
+
+            margin: 0 4px;
+            padding: 3px;
+
+            color: #fff;
+        }
+    }
+}
+
+// 商品详情
+.product-box751{
+    padding: 10px 28px 10px 75px;
+
+    @include box-sizing(border-box);
+    .title751{
+        font-size: 16px;
+        line-height: 36px;
+
+        position: relative;
+
+        height: 36px;
+
+        border-bottom: 1px solid #ddd;
+        span{
+            display: inline-block;
+
+            color: nth($font-color, 5);
+            border-bottom: 1px solid nth($font-color, 5);
+        }
+        .more751{
+            float: right;
+
+            color: nth($font-color, 2);
+        }
+    }
+    .warning751{
+        color: $warn-color;
+    }
+    .pic-zoom751{
+        float: left;
+
+        width: 480px;
+    }
+    .product-number751{
+        line-height: 2;
+
+        text-align: right;
+    }
+    .pic-big751{
+        width: 100%;
+        height: 480px;
+
+        border: 1px solid nth($border-color, 7);
+    }
+    .share751{
+        padding: 12px 0 20px 0;
+    }
+    .pic-small751{
+        font-size: 0;
+
+        width: 100%;
+        a{
+            display: inline-block;
+
+            width: 21.25%;
+            margin-right: 5%;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        img{
+            width: 100%;
+
+            border: 1px solid nth($border-color, 7);
+        }
+    }
+    .product-intro751{
+        float: right;
+
+        width: 567px;
+        padding-top: 28px;
+        h1{
+            font-size: 25px;
+
+            min-height: 60px;
+        }
+        h3{
+            font-size: 16px;
+
+            color: nth($font-color, 5);
+        }
+    }
+    .price751{
+        margin: 10px 0 10px -10px;
+        padding: 10px;
+
+        color: nth($font-color, 3);
+        background-color: nth($bg-color, 1);
+    }
+    .price-item751{
+        line-height: 2;
+        strong{
+            font-size: 30px;
+
+            margin: 0 15px 0 25px;
+
+            color: nth($font-color, 5);
+        }
+        del{
+            margin-right: 130px;
+        }
+        .icon{
+            margin-bottom: -8px;
+
+            cursor: pointer;
+        }
+    }
+    .standard751{
+        p{
+            display: inline-block;
+
+            width: 210px;
+            padding: 10px 0;
+        }
+    }
+    .stock751{
+        padding: 10px 0;
+    }
+    .amount751{
+        font-size: 0;
+
+        display: inline-block;
+
+        margin-right: 55px;
+    }
+    .cur-num751{
+        font-size: 16px;
+        line-height: 40px;
+
+        display: inline-block;
+
+        width: 70px;
+        height: 40px;
+
+        text-align: center;
+
+        border-top: 1px solid nth($border-color, 7);
+        border-bottom: 1px solid nth($border-color, 7);
+    }
+    .amount-add751, .amount-minus751{
+        font-size: 16px;
+        line-height: 40px;
+
+        display: inline-block;
+
+        width: 40px;
+        height: 40px;
+
+        cursor: pointer;
+        text-align: center;
+
+        border: 1px solid nth($border-color, 7);
+        background-color: #fff;
+        &:active{
+            background-color: nth($bg-color, 2);
+        }
+    }
+    .description751{
+        overflow-y: scroll;
+
+        max-height: 210px;
+        margin-top: 25px;
+        padding: 15px 0;
+
+        border-top: 1px solid nth($border-color, 7);
+        border-bottom: 1px dashed nth($border-color, 7);
+    }
+    .label-l751, .label-r751{
+        line-height: 50px;
+
+        display: inline-block;
+
+        width: 50%;
+    }
+    .label-l751{
+        float: left;
+        span{
+            margin: 0 5px;
+            padding: 5px;
+
+            color: #fff;
+            background-color: red;
+        }
+    }
+    .label-r751{
+        float: right;
+    }
+    .cookbook751{
+        font-size: 16px;
+
+        padding: 15px 0;
+
+        border-bottom: 1px dashed nth($border-color, 7);
+        .icon{
+            margin-top: 70px;
+        }
+    }
+    .cookbook-name751{
+        line-height: 35px;
+    }
+    .cookbook-wrap751{
+        height: 200px;
+    }
+    .cookbook-img751{
+        float: left;
+
+        width: 275px;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .package751{
+        float: left;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        width: 620px;
+        height: 100%;
+    }
+    .cookbook-list751{
+        float: left;
+
+        width: 200%;
+        height: 100%;
+        margin-left: 15px;
+
+        @include box-sizing(border-box);
+        li{
+            position: relative;
+
+            float: left;
+
+            width: 150px;
+            height: 100%;
+            img{
+                width: 100%;
+
+                cursor: pointer;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+    .cookbook-plus751{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 40px;
+        height: 100%;
+
+        text-align: center;
+    }
+    .cookbook-product751{
+        height: 100%;
+        padding: 20px 0 0 40px;
+
+        @include box-sizing(border-box);
+    }
+    .cookbook-title751{
+        font-size: 12px;
+
+        display: block;
+
+        width: 100%;
+        min-height: 36px;
+
+        color: nth($font-color, 2);
+
+        @include hideMultiLine(2);
+    }
+    .cookbook-price751{
+        color: nth($font-color, 5);
+        input{
+            margin-right: 10px;
+        }
+    }
+    .cookbook-buy751{
+        position: relative;
+
+        float: right;
+
+        width: 160px;
+        height: 200px;
+        .m-btn-main{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+        }
+    }
+    .total-price751{
+        font-size: 25px;
+
+        color: nth($font-color, 5);
+        span{
+            margin-left: 20px;
+        }
+    }
+    .detail-wrap751{
+        width: 100%;
+    }
+    .may-like751{
+        float: left;
+
+        width: 275px;
+        padding: 10px 20px 0 0;
+
+        border-right: 1px solid nth($border-color, 7);
+
+        @include box-sizing(border-box);
+        h2{
+            font-size: 20px;
+
+            margin: 15px 0;
+        }
+        .m-card{
+            margin-bottom: 10px;
+
+            border: 1px solid #f0f0f0;
+        }
+    }
+    .detail-info751{
+        float: left;
+
+        width: 822px;
+        padding: 20px 0 20px 20px;
+
+        @include box-sizing(border-box);
+        .title751{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// 结算
+.balance-box751{
+    color: nth($font-color, 3);
+    label{
+        cursor: pointer;
+    }
+    input[type=radio]{
+        margin: 0 2px;
+    }
+    .balance-wrap751{
+        width: 100%;
+        padding: 0 55px 0 65px;
+
+        @include box-sizing(border-box);
+    }
+    .balance-border751{
+        padding-left: 60px;
+
+        border-left: 1px solid nth($border-color, 7);
+    }
+    .title751{
+        font-size: 16px;
+
+        position: relative;
+
+        padding: 20px 0 10px 0;
+
+        color: nth($font-color, 5);
+        span{
+            font-size: 14px;
+
+            color: nth($font-color, 3);
+        }
+    }
+    .toggle-invoice751, .toggle-product751{
+        position: absolute;
+        top: 20px;
+        right: 0;
+        .icon{
+            margin-left: 10px;
+        }
+    }
+    .bt-grey751{
+        border-bottom: 1px solid nth($border-color, 7);
+    }
+    .bt-green751{
+        border-bottom: 1px dashed nth($border-color, 8);
+    }
+    .dots751{
+        &:before{
+            position: absolute;
+            top: 20px;
+            left: -72.5px;
+
+            width: 25px;
+            height: 25px;
+
+            content: '';
+
+            border-radius: 50%;
+            background-color: nth($bg-color, 3);
+            box-shadow: 0 0 5px nth($bg-color, 4);
+        }
+    }
+    .address-default751{
+        line-height: 2;
+
+        position: relative;
+
+        padding: 20px 0 20px 70px;
+
+        border-bottom: 1px solid nth($border-color, 7);
+        p{
+            position: relative;
+            z-index: 15;
+        }
+    }
+    .de-address-icon751{
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+    .add-address751{
+        position: absolute;
+        top: 10px;
+        right: 0;
+
+        color: nth($font-color, 5);
+    }
+    .address-list751{
+        overflow-y: scroll;
+
+        height: 240px;
+
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .address-item751{
+        line-height: 2;
+
+        position: relative;
+
+        padding: 10px 0 10px 70px;
+
+        color: nth($font-color, 2);
+        &:nth-child(2n-1){
+            background-color: #fcfcfc;
+        }
+    }
+    .address-name751{
+        font-size: 16px;
+        font-weight: bold;
+
+        margin-right: 12px;
+
+        color: nth($font-color, 2);
+    }
+    .address-label751{
+        margin-left: 12px;
+        padding: 2px 15px;
+
+        color: nth($font-color, 5);
+        border: 1px solid nth($border-color, 8);
+        border-radius: 10px;
+    }
+    .toggle751{
+        font-size: 14px;
+        line-height: 40px;
+
+        cursor: pointer;
+
+        color: nth($font-color, 2);
+        .icon{
+            margin-left: 10px;
+        }
+    }
+    .delivery-time751{
+        padding: 20px 0;
+    }
+    .arrow-wrap751{
+        line-height: 100%;
+
+        display: inline-block;
+
+        height: 100%;
+
+        vertical-align: top;
+        .icon{
+            margin: 54px 15px;
+
+            cursor: pointer;
+        }
+    }
+    .delivery-way751{
+        line-height: 2;
+
+        padding: 10px 0;
+    }
+    .mr751{
+        margin-right: 35px;
+    }
+    .pay-method751{
+        padding: 10px 0;
+    }
+    .method751{
+        width: 650px;
+        margin-left: 50px;
+        tr{
+            td{
+                line-height: 1.5;
+
+                padding: 5px 0;
+                &:first-child{
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+    .pay-online751{
+        padding: 10px 60px;
+
+        background-color: #fcfcfc;
+        .current751{
+            border: 1px solid nth($border-color, 8);
+        }
+    }
+    .pay-online-item751{
+        position: relative;
+
+        margin-top: -1px;
+        padding: 20px;
+        dt{
+            width: 100%;
+        }
+        dd{
+            display: none;
+
+            margin: 10px 0 0;
+            padding: 10px 0;
+        }
+        li{
+            float: left;
+
+            width: 188px;
+            height: 38px;
+            margin: 0 9px 10px;
+            padding: 1px;
+
+            border: 1px solid #ddd;
+            background: #fff;
+        }
+    }
+    .invoice751{
+        padding: 10px 0;
+    }
+    .check751{
+        margin-bottom: 10px;
+        padding: 0 35px;
+        p{
+            display: inline-block;
+
+            min-width: 90px;
+        }
+    }
+    .invoice-wrap751{
+        padding: 30px 0;
+
+        background: #fcfcfc;
+    }
+    .content751{
+        padding: 0 60px;
+        p, button{
+            margin: 5px 0;
+        }
+    }
+    .invoice-res751{
+        line-height: 1.5;
+        // 发票信息保存结果
+
+        display: none;
+
+        padding: 10px 60px;
+    }
+    .list-table751{
+        width: 100%;
+
+        text-align: center;
+        tr{
+            border: 1px solid nth($border-color, 7);
+        }
+        td{
+            line-height: 1.5;
+
+            min-width: 150px;
+            padding: 10px 0;
+        }
+    }
+    .total-num751{
+        line-height: 42px;
+
+        display: inline-block;
+        float: right;
+
+        min-width: 150px;
+
+        text-align: center;
+    }
+    .special751{
+        padding: 10px 0;
+        textarea{
+            width: 100%;
+            min-height: 10em;
+            margin: 0;
+            padding: 0;
+
+            resize: none;
+
+            border: 1px solid nth($border-color, 7);
+        }
+    }
+    .submit-order751{
+        width: 100%;
+        padding: 30px 55px 30px 65px;
+
+        background-color: #f6f7f7;
+
+        @include box-sizing(border-box);
+        button{
+            float: right;
+        }
+    }
+    .order-info751{
+        float: right;
+
+        margin-right: 10px;
+        p{
+            text-align: right;
+            &:first-child{
+                font-size: 16px;
+                font-weight: bold;
+
+                margin-bottom: 4px;
+                span{
+                    color: nth($font-color, 5);
+                }
+            }
+            &:last-child{
+                font-size: 14px;
+            }
+        }
+    }
+    .shadow751{
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        // 添加地址
+
+        display: none;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, .3);
+    }
+    .append-address751{
+        position: absolute;
+        top: 20%;
+        right: 0;
+        left: 0;
+
+        width: 800px;
+        margin: 0 auto;
+        padding: 20px 205px 40px 40px;
+
+        border: 10px solid #f0f0f0;
+        background-color: #fff;
+
+        @include box-sizing(border-box);
+        .title751{
+            font-size: 16px;
+
+            color: nth($font-color, 5);
+        }
+    }
+    .tips751{
+        font-size: 14px;
+        line-height: 36px;
+        b{
+            color: #ee555a;
+        }
+    }
+    .item751{
+        margin-bottom: 5px;
+        input{
+            width: 236px;
+        }
+        select{
+            line-height: 40px;
+
+            width: 120px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .tips751{
+            display: inline-block;
+        }
+    }
+    .half-item751{
+        width: 48%;
+        input{
+            width: 235px;
+        }
+    }
+    .btn-wrap751{
+        margin-top: 20px;
+        button{
+            margin-right: 40px;
+        }
+    }
+}
+
+// 商品列表
+.list-box751{
+    padding: 10px 60px 10px 0;
+    .m-breadcrumb{
+        margin-bottom: 10px;
+        padding-left: 75px;
+    }
+    .content-left751{
+        float: left;
+
+        width: 220px;
+
+        border-right: 1px solid nth($border-color, 5);
+    }
+    .content-right751{
+        float: right;
+
+        width: 916px;
+    }
+    .sub-menu751{
+        padding: 0 20px;
+
+        outline: 2px solid nth($border-color, 5);
+
+        @include box-sizing(border-box);
+        a{
+            font-size: 14px;
+            line-height: 32px;
+
+            position: relative;
+
+            display: inline-block;
+
+            width: 100%;
+
+            text-align: center;
+
+            color: nth($font-color, 2);
+            &:after{
+                position: absolute;
+                top: 11px;
+                right: 0;
+
+                width: 8px;
+                height: 8px;
+
+                content: '';
+                -webkit-transform: rotate(-45deg);
+                   -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                     -o-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+
+                border-top: none;
+                border-right: 1px solid #737373;
+                border-bottom: 1px solid #737373;
+                border-left: none;
+            }
+        }
+        a.current751{
+            color: nth($font-color, 5);
+            &:after{
+                border-right: 1px solid nth($border-color, 8);
+                border-bottom: 1px solid nth($border-color, 8);
+            }
+        }
+    }
+    .promote751{
+        margin-top: 60px;
+        h2{
+            padding-left: 20px;
+        }
+        .m-card{
+            margin-bottom: 10px;
+        }
+    }
+    .tag751{
+        li{
+            padding: 15px 0;
+
+            border-bottom: 1px solid nth($border-color, 5);
+            a, strong{
+                display: inline-block;
+
+                margin: 0 15px;
+
+                color: nth($font-color, 2);
+            }
+            a:hover{
+                text-decoration: none;
+
+                color: nth($font-color, 5);
+            }
+            a.current751{
+                color: nth($font-color, 5);
+            }
+            strong{
+                font-weight: bold;
+            }
+        }
+    }
+    .list751{
+        width: 100%;
+        padding: 20px 0;
+        li{
+            position: relative;
+
+            display: block;
+            float: left;
+
+            width: 25%;
+            margin-bottom: 10px;
+
+            background-color: #fff;
+            &:hover{
+                z-index: 30;
+
+                -webkit-transform: scale(1.1);
+                   -moz-transform: scale(1.1);
+                     -o-transform: scale(1.1);
+
+                @include de-shadow();
+            }
+        }
+    }
+}
