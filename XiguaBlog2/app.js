@@ -1,16 +1,16 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var express       = require('express');
+var path          = require('path');
+var favicon       = require('serve-favicon');
+var logger        = require('morgan');
+var cookieParser  = require('cookie-parser');
+var bodyParser    = require('body-parser');
 
-var routes = require('./routes/index');
-var settings = require('./settings'); // config
+var routes        = require('./routes/index');
+var settings      = require('./settings'); // config
 
-var session = require('express-session'); // session
-var MongoStore = require('connect-mongo')(session);
-var flash = require('connect-flash');
+var session       = require('express-session'); // session
+var MongoStore    = require('connect-mongo')(session);
+var flash         = require('connect-flash');
 
 var app = express();
 
@@ -40,7 +40,7 @@ app.use(flash()); // 放在app.use(session(...))后边
 
 routes(app);
 
-// catch 404 and forward to error handler
+// 404
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
