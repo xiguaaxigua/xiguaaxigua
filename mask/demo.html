@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="mask.css">
+    <style>
+    .item {
+        padding-bottom: 6px;
+        display: inline-block;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    
+    .item .delete {
+        background: url('delete_icon.png') no-repeat;
+        width: 37px;
+        height: 38px;
+        position: absolute;
+        cursor: pointer;
+        top: 10px;
+        right: -80px
+    }
+    
+    .item a {
+        background-color: #FAFAFA;
+        border: none;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+    }
+    
+    .item a img {
+        display: block;
+        border: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <a href="http://tutorialzine.com/?p=1274">
+            <img src="http://cdn.tutorialzine.com/img/featured/1274.jpg" title="Coding a Rotating Image Slideshow w/ CSS3 and jQuery" alt="Coding a Rotating Image Slideshow w/ CSS3 and jQuery" width="620" height="340" />
+        </a>
+        <div class="delete"></div>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="mask.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.item .delete').click(function() {
+            var elem = $(this).closest('.item');
+
+            $.mask({
+                'title': 'Delete Confirmation',
+                'message': 'You are about to delete this item. <br />It cannot be restored at a later time! Continue?',
+                'buttons': {
+                    'Yes': {
+                        'class': 'blue',
+                        'action': function() {
+                            console.log('点击了yes');
+                        }
+                    },
+                    'No': {
+                        'class': 'gray',
+                        'action': function() {
+                        	console.log('点击了no');
+                        }
+                    }
+                }
+            });
+
+        });
+
+    });
+    </script>
+</body>
+
+</html>
