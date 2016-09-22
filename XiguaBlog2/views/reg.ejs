@@ -1,9 +1,35 @@
 <%- include header %>
 <form method="post">
-  用户名：  <input type="text" name="name"/><br />
-  密码：    <input type="password" name="password"/><br />
-  确认密码：<input type="password" name="password-repeat"/><br />
-  邮箱：    <input type="email" name="email"/><br />
-           <input type="submit" value="注册"/>
+    <table class="reg-table">
+        <tr>
+            <td>用户名</td>
+            <td><input type="text" name="name"/></td>
+        </tr>
+        <tr>
+            <td>性别</td>
+            <td><input type="text" name="sex"></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input type="password" name="password"/></td>
+        </tr>
+        <tr>
+            <td>确认</td>
+            <td><input type="password" name="password-repeat"/></td>
+        </tr>
+        <tr>
+            <td>邮箱</td>
+            <td><input type="email" name="email"/></td>
+        </tr>
+        <tr>
+            <td>备注</td>
+            <td><textarea name="note" id="" cols="30" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right">
+                <input type="submit" value="注册"/>
+            </td>
+        </tr>
+    </table>
 </form>
 <%- include footer %>

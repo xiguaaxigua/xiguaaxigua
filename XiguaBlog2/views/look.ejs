@@ -1,0 +1,20 @@
+<%- include header %>
+<table border="1" class="look-table">
+    <tr>
+        <td>用户名</td>
+        <td>性别</td>
+        <td>密码</td>
+        <td>邮箱</td>
+        <td>备注</td>
+    </tr>
+    <% users.forEach(function(user){ %>
+    <tr>
+        <td><%= user.name %></td>
+        <td><%= user.sex %></td>
+        <td><%= user.password %></td>
+        <td><%= user.email %></td>
+        <td><%= user.note %></td>
+    </tr>
+    <% }) %>
+</table>
+<%- include footer %>

@@ -1,0 +1,15 @@
+<%- include header %>
+<% messages.forEach(function(message, index){ %>
+<div class="item">
+	<h3><%= message.name.name %>说</h3>
+	<p><%= message.name.content %></p>
+</div>
+<% }) %>
+<hr>
+<form class="message-form" action="" method="post">
+	<input type="text" name="name"><br>
+	<input type="text" name="time"><br>
+    <textarea name="content" id="" cols="30" rows="10"></textarea><br>
+    <input type="submit" value="留言">
+</form>
+<%- include footer %>

@@ -6,7 +6,7 @@
 body{
     font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 
-    width: 600px;
+    width: 1000px;
     margin: 2em auto;
     padding: 0 2em;
 }
@@ -43,14 +43,13 @@ nav a{
 
     text-decoration: none;
 
-    color: #000;
+    color: #999;
 }
 
 nav a:hover{
     -webkit-transition: color .2s linear;
 
-    color: #f9f9f9;
-    background-color: #f00;
+    color: #000;
 }
 
 article{
@@ -73,4 +72,10 @@ article a:hover{
 
 .info{
     font-size: 14px;
+}
+.reg-table td{
+    padding: 5px 0;
+}
+.message-form input{
+    margin: 10px 0;
 }
