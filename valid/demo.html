@@ -3,94 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+		.error{
+			color: red;
+		}
+	</style>
 </head>
 <body>
+	<h2 id="error"></h2><br><br>
 	<form action="" id="DemoForm">
-		<input data-valid="" type="text">
+		<input id="PhoneId" name="phone" type="number"><br><br>
+		<input id="PswId" name="password" type="password"><br><br>
+		<input type="submit" value="提交">
 	</form>
 	<script src="bt/jq.js"></script>
-	<script src="valid.js"></script>
+	<script src="valid2.js"></script>
 	<script>
-		$('p').demo();
-	</script>
-	<!-- <script>
-		$('#DemoForm').validate({
-			message: '',
-			fields: {
-				username: {
+		$('#DemoForm').Valid([
+				{
+					name: 'phone',
 					validators: {
 						notEmpty: {
-							message: '用户名必填！'
+							message: '非空'
 						},
 						isPhone: {
-							message: '不符合手机格式！'
-						},
-						isEmail: {
-							message: '不符合邮箱格式！'
-						},
-						stringLength: {
-							min: 6,
-							max: 12,
-							message: '长度在6-12之间!'
+							message: '手机号格式错误'
 						}
 					}
 				},
-				password: {
+				{
+					name: 'password',
 					validators: {
 						notEmpty: {
-							message: '密码必填！'
-						},
-						stringLength: {
-							min: 6,
-							max: 12,
-							message: '长度在6-12之间!'
-						},
-						regExp: {
-							regexp: /^[0-9]{11}$/,
-							message: '不能包含特殊字符!'
-						},
-						different: {
-							fields: 'username',
-							message: '密码不能和用户名一样！'
-						}
-					}
-				},
-				confirmPassword: {
-					validators: {
-						notEmpty: {
-							message: '密码必填！'
-						},
-						identical: {
-							fields: 'password',
-							message: '两次输入的密码不一致！'
-						},
-						different: {
-							fields: 'username',
-							message: '密码不能和用户名一样！'
-						}
-					}
-				},
-				picCode: {
-					validators: {
-						equal: '3312',
-						message: '图形验证码错误！'
-					},
-					notEmpty: {
-						message: '图形验证码必填！'
-					}
-				},
-				terms: {
-					validators: {
-						checked: {
-							message: '请同意注册条款！'
+							message: '非空'
 						}
 					}
 				}
-			},
-			submitHandle: function(){
-
-			}
+			],
+		function(){
+			console.log('callback')
 		});
-	</script> -->
+	</script>
 </body>
 </html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="vendor/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="dist/js/bootstrapValidator.js"></script>
+    <style>
+    input[type=text] {
+        width: 50%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+    
+    input:focus {
+        border-color: green;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    }
+    
+    .has-error input,
+    .has-error input:focus {
+        border-color: #843534!important;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+    }
+    
+    .m-form-item {
+        margin-bottom: 30px;
+    }
+    
+    .m-form-item small {
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <form id="RegForm" action="">
+        <div class="m-form-item">
+            <input type="text" name="username" placeholder="用户名！">
+        </div>
+        <div class="m-form-item">
+            <input type="text" name="phone" placeholder="手机号！">
+        </div>
+        <div class="m-form-item">
+            <input type="text" name="email" placeholder="邮箱！">
+        </div>
+        <div class="m-form-item">
+            <input type="text" name="password" placeholder="密码！">
+        </div>
+        <div class="m-form-item">
+            <input type="text" name="confirmPassword" placeholder="重复密码！">
+        </div>
+        <div class="m-form-item">
+        	<label for="Music">
+        		<input type="checkbox" name="hobby" id="Music">音乐
+        	</label>
+        	<label for="Movie">
+        		<input type="checkbox" name="hobby" id="Movie">电影
+        	</label>
+        	<label for="Read">
+        		<input type="checkbox" name="hobby" id="Read">读书
+        	</label>
+        	<label for="Game">
+        		<input type="checkbox" name="hobby" id="Game">游戏
+        	</label>
+        </div>
+        <input type="submit" value="注册">
+    </form>
+    <script>
+    $('#RegForm').bootstrapValidator({
+        message: '必填',
+        fields: {
+            username: {
+                validators: {
+                    notEmpty: {
+                        message: '用户名不能为空！'
+                    }
+                }
+            },
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: '手机号不能为空！'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: '邮箱不能为空！'
+                    },
+                    emailAddress: {
+                        message: '邮箱格式错误！'
+                    }
+                }
+            },
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: '密码不能为空！'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 12,
+                        message: '密码在6-12位之间！'
+                    },
+                    identical: {
+                        field: 'confirmPassword',
+                        message: '两次输入的密码不一致！'
+                    },
+                    different: {
+                        field: 'username',
+                        message: '密码不能和用户名相同！'
+                    }
+                }
+            },
+            confirmPassword: {
+                validators: {
+                    notEmpty: {
+                        message: '确认密码不能为空！'
+                    },
+                    identical: {
+                        field: 'password',
+                        message: '两次输入的密码不一致！'
+                    },
+                    different: {
+                        field: 'username',
+                        message: '密码不能和用户名相同！'
+                    }
+                }
+            },
+            'hobby': {
+                validators: {
+                    notEmpty: {
+                        message: '至少选择一个爱好！'
+                    }
+                }
+            },
+        }
+    });
+    </script>
+</body>
+
+</html>
