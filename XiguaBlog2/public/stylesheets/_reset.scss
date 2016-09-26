@@ -1,0 +1,143 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	font-size: 100%;
+
+	margin: 0;
+	padding: 0;
+
+	vertical-align: baseline;
+
+	border: 0;
+	outline: 0;
+	background: transparent;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+html {
+	min-width: 950px;
+}
+body {
+	font: 14px/22px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+	background-position: center top;
+}
+p:first-child, blockquote:first-child, pre:first-child, table:first-child, ul:first-child, ol:first-child, a + ul, a + ol {
+	margin-top: 0;
+}
+p{
+  margin-bottom: 1em;
+}
+a {
+	text-decoration: none;
+}
+blockquote {
+	font-family: Georgia, serif;
+	font-style: italic;
+
+	padding: 0 10px;
+}
+pre {
+	font-family: "Lucida Console", Monaco, monospace;
+
+	overflow: auto;
+}
+table {
+	width: 100%;
+
+	border-spacing: 3px;
+	border-collapse: separate;
+}
+th, td {
+	line-height: 25px;
+
+	padding: 0 15px;
+}
+th {
+	font-weight: normal;
+
+	text-transform: uppercase;
+}
+ul, ol {
+	list-style-position: outside;
+}
+ol {
+	padding-left: 24px;
+
+	list-style-type: decimal;
+}
+.input, .textarea {
+	background-repeat: no-repeat;
+}
+input, textarea {
+	font: 13px/22px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+	margin: 0;
+	padding: 0;
+
+	resize: none;
+
+	border: 0;
+	background-color: transparent;
+}
+.input {
+	line-height: 27px;
+
+	min-width: 201px;
+	height: 27px;
+
+	text-transform: lowercase;
+}
+.textarea {
+	width: 445px; /* 461 - 2*8 */
+	height: 142px; /* 158 - 2*8 */
+	padding: 8px;
+
+	background-position: 0 -27px;
+}
+textarea {
+	overflow: auto;
+
+	width: 100%;
+	height: 142px;
+}
+.submit {
+	font-size: 25px;
+	line-height: 25px;
+}
+.submit a {
+	cursor: pointer;
+	letter-spacing: -1.55px;
+}
+.submit a.cufon {
+	letter-spacing: 0;
+}
+input[type="submit"] {
+	background-position: -9999px -9999px;
+}
+
+.clearfix:after {
+  display: block;
+
+  visibility: hidden;
+  clear: both;
+
+  height: 0;
+
+  content: '.';
+}
+
+.clearfix {
+  zoom: 1;
+}
+.tl{
+  text-align: left;
+}
+.tr{
+  text-align: right;
+}
+.tc{
+  text-align: center;
+}

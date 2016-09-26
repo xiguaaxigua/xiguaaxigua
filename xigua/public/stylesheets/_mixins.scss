@@ -1,0 +1,23 @@
+
+@mixin transform($val) {
+	-webkit-transform: $val; /* Safari 和 Chrome */
+	   -moz-transform: $val; 	/* Firefox */
+	    -ms-transform: $val; 	/* IE 9 */
+	     -o-transform: $val;
+	        transform: $val;
+}
+
+@mixin shadow($arg...) {
+	-webkit-box-shadow: $arg;
+	   -moz-box-shadow: $arg;
+	        box-shadow: $arg;
+
+	     -o-box-shadow: $arg;
+}
+
+/******* 盒模式 ******/
+@mixin box-sizing($arg...) {
+	-webkit-box-sizing: $arg;
+	   -moz-box-sizing: $arg;
+	        box-sizing: $arg;
+}
